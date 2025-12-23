@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import { EffectCoverflow, Pagination } from "swiper/modules";
 import { MapPin, Clock, Users, CheckCircle, ArrowRight } from "lucide-react";
 import { freeZones } from "@/lib/data";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -13,7 +13,6 @@ import Button from "@/components/ui/Button";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 export default function FreeZoneSlider() {
   return (
@@ -34,7 +33,7 @@ export default function FreeZoneSlider() {
           className="mt-12"
         >
           <Swiper
-            modules={[EffectCoverflow, Pagination, Navigation]}
+            modules={[EffectCoverflow, Pagination]}
             effect="coverflow"
             grabCursor={true}
             centeredSlides={true}
@@ -49,7 +48,6 @@ export default function FreeZoneSlider() {
             pagination={{
               clickable: true,
             }}
-            navigation={true}
             breakpoints={{
               320: {
                 slidesPerView: 1,

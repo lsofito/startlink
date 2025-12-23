@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper/modules";
+import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 import { ArrowRight } from "lucide-react";
 import * as Icons from "lucide-react";
 import Link from "next/link";
@@ -12,7 +12,6 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 // Dynamic icon component
 const DynamicIcon = ({ name }: { name: string }) => {
@@ -39,7 +38,7 @@ export default function ServicesSlider() {
           className="mt-12"
         >
           <Swiper
-            modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+            modules={[EffectCoverflow, Pagination, Autoplay]}
             effect="coverflow"
             grabCursor={true}
             centeredSlides={true}
@@ -55,7 +54,6 @@ export default function ServicesSlider() {
               clickable: true,
               dynamicBullets: true,
             }}
-            navigation={true}
             autoplay={{
               delay: 4000,
               disableOnInteraction: false,

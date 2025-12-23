@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
-import { EffectCards, Pagination, Navigation } from "swiper/modules";
+import { EffectCards, Pagination } from "swiper/modules";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import * as Icons from "lucide-react";
 import { serviceCategories } from "@/lib/data";
@@ -16,7 +16,6 @@ import Button from "@/components/ui/Button";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 // Dynamic icon component
 const DynamicIcon = ({ name }: { name: string }) => {
@@ -48,7 +47,7 @@ export default function ServiceShowcase() {
             className="relative"
           >
             <Swiper
-              modules={[EffectCards, Pagination, Navigation]}
+              modules={[EffectCards, Pagination]}
               effect="cards"
               grabCursor={true}
               cardsEffect={{
@@ -60,9 +59,8 @@ export default function ServiceShowcase() {
               pagination={{
                 clickable: true,
               }}
-              navigation={true}
               onSlideChange={(swiper: SwiperType) => setActiveIndex(swiper.activeIndex)}
-              className="!w-[300px] md:!w-[400px] mx-auto pb-12"
+              className="!w-[280px] sm:!w-[320px] md:!w-[380px] mx-auto pb-12"
             >
               {serviceCategories.map((service) => (
                 <SwiperSlide key={service.id}>
@@ -98,7 +96,7 @@ export default function ServiceShowcase() {
 
             {/* Swipe Hint */}
             <p className="text-center text-gray-500 text-sm mt-4">
-              Swipe or use arrows to explore services
+              Swipe to explore services
             </p>
           </motion.div>
 
@@ -179,21 +177,23 @@ export default function ServiceShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex justify-center gap-3 mt-12"
+          className="mt-12 overflow-x-auto pb-4 -mx-4 px-4"
         >
-          {serviceCategories.map((service, idx) => (
-            <button
-              key={service.id}
-              onClick={() => setActiveIndex(idx)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                idx === activeIndex
-                  ? "bg-primary text-dark"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-              }`}
-            >
-              {service.title}
-            </button>
-          ))}
+          <div className="flex justify-start lg:justify-center gap-2 sm:gap-3 min-w-max">
+            {serviceCategories.map((service, idx) => (
+              <button
+                key={service.id}
+                onClick={() => setActiveIndex(idx)}
+                className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap ${
+                  idx === activeIndex
+                    ? "bg-primary text-dark shadow-md"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                }`}
+              >
+                {service.title}
+              </button>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

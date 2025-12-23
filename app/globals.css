@@ -183,38 +183,10 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
 }
 
-/* Custom Swiper Navigation */
+/* Custom Swiper Navigation - Hide default */
 .swiper-button-next,
 .swiper-button-prev {
-  width: 44px !important;
-  height: 44px !important;
-  background: var(--primary) !important;
-  border-radius: 50% !important;
-  border: none !important;
-  transition: all 0.3s ease !important;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-}
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background: var(--primary-dark) !important;
-  transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-}
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  content: '' !important;
-  width: 10px !important;
-  height: 10px !important;
-  border-right: 2.5px solid #1A1A2E !important;
-  border-bottom: 2.5px solid #1A1A2E !important;
-}
-.swiper-button-next::after {
-  transform: rotate(-45deg) !important;
-  margin-left: -3px !important;
-}
-.swiper-button-prev::after {
-  transform: rotate(135deg) !important;
-  margin-right: -3px !important;
+  display: none !important;
 }
 
 /* Swiper Progress Bar */

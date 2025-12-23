@@ -4,14 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { blogPosts } from "@/lib/data";
 import SectionHeader from "@/components/ui/SectionHeader";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 export default function BlogSlider() {
   return (
@@ -32,13 +31,12 @@ export default function BlogSlider() {
           className="mt-12"
         >
           <Swiper
-            modules={[Pagination, Navigation, Autoplay]}
+            modules={[Pagination, Autoplay]}
             spaceBetween={30}
             slidesPerView={1}
             pagination={{
               clickable: true,
             }}
-            navigation={true}
             autoplay={{
               delay: 6000,
               disableOnInteraction: false,
