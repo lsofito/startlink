@@ -43,6 +43,7 @@ export default function ServicesSlider() {
             grabCursor={true}
             centeredSlides={true}
             slidesPerView="auto"
+            loop={true}
             coverflowEffect={{
               rotate: 0,
               stretch: 0,
@@ -76,7 +77,7 @@ export default function ServicesSlider() {
             className="pb-16 !overflow-visible"
           >
             {services.map((service, index) => (
-              <SwiperSlide key={service.title} className="!w-[320px] md:!w-[380px]">
+              <SwiperSlide key={service.title} className="!w-[280px] sm:!w-[320px] md:!w-[380px]">
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -84,22 +85,22 @@ export default function ServicesSlider() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                 >
                   <Link href={service.href}>
-                    <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group h-full border border-gray-100">
+                    <div className="bg-white rounded-2xl p-5 sm:p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group h-full border border-gray-100">
                       {/* Icon */}
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-dark transition-all duration-300 group-hover:scale-110">
+                      <div className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center text-primary mb-4 sm:mb-6 group-hover:bg-primary group-hover:text-dark transition-all duration-300 group-hover:scale-110">
                         <DynamicIcon name={service.icon} />
                       </div>
 
                       {/* Content */}
-                      <h3 className="font-display text-xl font-bold text-dark mb-3 group-hover:text-primary transition-colors">
+                      <h3 className="font-display text-lg sm:text-xl font-bold text-dark mb-2 sm:mb-3 group-hover:text-primary transition-colors">
                         {service.title}
                       </h3>
-                      <p className="text-gray-600 mb-6 line-clamp-2">
+                      <p className="text-gray-600 text-sm sm:text-base mb-4 sm:mb-6 line-clamp-2">
                         {service.description}
                       </p>
 
                       {/* CTA */}
-                      <div className="flex items-center text-primary font-medium group-hover:gap-3 gap-2 transition-all">
+                      <div className="flex items-center text-primary font-medium text-sm sm:text-base group-hover:gap-3 gap-2 transition-all">
                         <span>Learn More</span>
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </div>

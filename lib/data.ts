@@ -9,13 +9,13 @@ export const navLinks = [
 
 // Company Info
 export const companyInfo = {
-  name: "[Company Name]",
+  name: "ABT Business & Financial Services",
   tagline: "Your Business Journey in UAE Starts Here",
-  phone: "+971 4 XXX XXXX",
-  email: "info@company.ae",
+  phone: "+97150 9490768",
+  email: "Info@starlinkbiz.com",
   address: "Office XXX, Business Bay, Dubai, UAE",
   hours: "Sun-Thu: 9AM - 6PM",
-  whatsapp: "+971501234567",
+  whatsapp: "+971509490768",
 };
 
 // Stats
@@ -52,39 +52,51 @@ export const jurisdictions = [
 export const services = [
   {
     title: "Company Formation",
-    description: "Complete setup for mainland, free zone & offshore companies",
+    description: "Assistance with registering your business in any of the UAE's Free Zones, Mainland, or Offshore jurisdictions.",
     icon: "FileText",
     href: "/services#formation",
   },
   {
-    title: "Trade License",
-    description: "Commercial, professional, and industrial license processing",
+    title: "Trade Licensing",
+    description: "We handle the paperwork and approvals required for obtaining a trade license based on your business activities.",
     icon: "ScrollText",
     href: "/services#license",
   },
   {
-    title: "Visa Services",
-    description: "Investor, partner, and employee visa processing",
-    icon: "Stamp",
-    href: "/services#visa",
-  },
-  {
     title: "PRO Services",
-    description: "Government liaison, document clearing, attestation",
+    description: "Our team manages government-related documentation, visa processing, labor cards, and other legal procedures.",
     icon: "FolderCheck",
     href: "/services#pro",
   },
   {
-    title: "Bank Account",
-    description: "Corporate bank account opening assistance",
+    title: "Bank Account Opening",
+    description: "We assist in opening corporate bank accounts to help manage your finances smoothly.",
     icon: "Landmark",
     href: "/services#banking",
   },
   {
-    title: "Accounting & Tax",
-    description: "VAT registration, bookkeeping, tax compliance",
+    title: "Office Setup",
+    description: "Get help in finding the right office space, whether it's a virtual office, coworking space, or physical office.",
+    icon: "Building",
+    href: "/services#office",
+  },
+  {
+    title: "VAT & Tax Registration",
+    description: "Ensure compliance with VAT registration and other tax-related requirements.",
     icon: "Calculator",
     href: "/services#accounting",
+  },
+  {
+    title: "Legal Consulting",
+    description: "Guidance on local laws, labor regulations, and contractual matters to safeguard your business.",
+    icon: "Scale",
+    href: "/services#legal",
+  },
+  {
+    title: "Business Sponsorship",
+    description: "For mainland companies, we provide trusted local sponsorship to meet legal requirements.",
+    icon: "Handshake",
+    href: "/services#sponsorship",
   },
 ];
 
@@ -543,7 +555,8 @@ export const footerLinks = {
     { name: "Accounting & Tax", href: "/services#accounting" },
   ],
   legal: [
-    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Refund Policy", href: "/refund-policy" },
     { name: "Terms of Service", href: "/terms" },
   ],
 };
