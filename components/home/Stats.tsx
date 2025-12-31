@@ -15,7 +15,7 @@ export default function Stats() {
     <section
       className="py-20 relative overflow-hidden"
       style={{
-        background: 'linear-gradient(135deg, #D4AF37 0%, #1D4E89 100%)',
+        background: 'linear-gradient(135deg, #E89913 0%, #22C55E 100%)',
         isolation: 'isolate'
       }}
     >

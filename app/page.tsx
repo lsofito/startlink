@@ -9,10 +9,12 @@ import HowItWorks from "@/components/home/HowItWorks";
 import Testimonials from "@/components/home/Testimonials";
 import BlogSlider from "@/components/home/BlogSlider";
 import CTABanner from "@/components/home/CTABanner";
+import LeadPopup from "@/components/home/LeadPopup";
 
 export default function Home() {
   return (
     <>
+      <LeadPopup />
       <Hero />
       <TrustedBy />
       <WhyUAE />

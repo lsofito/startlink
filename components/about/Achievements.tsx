@@ -36,7 +36,7 @@ const mediaLogos = [
 
 export default function Achievements() {
   return (
-    <section className="section-padding text-white relative" style={{ backgroundColor: '#1A1A2E', isolation: 'isolate' }}>
+    <section className="section-padding text-white relative" style={{ backgroundColor: '#111111', isolation: 'isolate' }}>
       <div className="container-custom">
         <SectionHeader
           badge="Recognition"

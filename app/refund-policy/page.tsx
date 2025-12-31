@@ -3,7 +3,7 @@ import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
   title: "Refund Policy",
-  description: "Refund Policy for ABT Business & Financial Services LLC - Learn about our refund terms and conditions.",
+  description: "Refund Policy for Star Link Business Solutions FZE LLC - Learn about our refund terms and conditions.",
 };
 
 export default function RefundPolicyPage() {
@@ -21,7 +21,7 @@ export default function RefundPolicyPage() {
             {/* Introduction */}
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                At ABT BUSINESS & FINANCIAL SERVICES LLC, we are committed to providing excellent services
+                At Star Link Business Solutions FZE LLC, we are committed to providing excellent services
                 to our clients. This Refund Policy outlines the terms and conditions under which refunds
                 may be requested and processed.
               </p>
@@ -41,7 +41,7 @@ export default function RefundPolicyPage() {
                 </h2>
                 <div className="pl-13 space-y-4 text-gray-600">
                   <p>
-                    ABT BUSINESS & FINANCIAL SERVICES LLC provides business setup, licensing, visa processing,
+                    Star Link Business Solutions FZE LLC provides business setup, licensing, visa processing,
                     PRO services, and related consultancy services in the United Arab Emirates. Our services
                     involve third-party government fees, processing charges, and professional service fees.
                   </p>
@@ -203,7 +203,7 @@ export default function RefundPolicyPage() {
                 </h2>
                 <div className="pl-13 text-gray-600">
                   <p>
-                    ABT BUSINESS & FINANCIAL SERVICES LLC reserves the right to modify this Refund Policy
+                    Star Link Business Solutions FZE LLC reserves the right to modify this Refund Policy
                     at any time. Changes will be effective immediately upon posting on this website.
                     Continued use of our services after any modifications indicates your acceptance
                     of the updated policy.

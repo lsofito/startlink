@@ -59,7 +59,7 @@ const benefits = [
 
 export default function WhyUAE() {
   return (
-    <section className="section-padding relative overflow-hidden" style={{ backgroundColor: '#0F0F1A' }}>
+    <section className="section-padding relative overflow-hidden" style={{ backgroundColor: '#0D0D0D' }}>
       {/* Background Elements */}
       <div className="absolute inset-0">
         {/* Gradient orbs */}
@@ -78,8 +78,8 @@ export default function WhyUAE() {
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
-            backgroundImage: `linear-gradient(rgba(212, 175, 55, 0.3) 1px, transparent 1px),
-                             linear-gradient(90deg, rgba(212, 175, 55, 0.3) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(232, 153, 19, 0.3) 1px, transparent 1px),
+                             linear-gradient(90deg, rgba(232, 153, 19, 0.3) 1px, transparent 1px)`,
             backgroundSize: '60px 60px'
           }}
         />

@@ -14,7 +14,7 @@ export default function PageHero({ title, subtitle, breadcrumbs }: PageHeroProps
   return (
     <section
       className="relative pt-32 pb-20 overflow-hidden"
-      style={{ backgroundColor: '#1A1A2E', isolation: 'isolate' }}
+      style={{ backgroundColor: '#111111', isolation: 'isolate' }}
     >
       {/* Animated gradient orbs */}
       <motion.div
@@ -32,8 +32,8 @@ export default function PageHero({ title, subtitle, breadcrumbs }: PageHeroProps
       <div
         className="absolute inset-0 opacity-[0.02]"
         style={{
-          backgroundImage: `linear-gradient(rgba(212, 175, 55, 0.1) 1px, transparent 1px),
-                           linear-gradient(90deg, rgba(212, 175, 55, 0.1) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(rgba(232, 153, 19, 0.1) 1px, transparent 1px),
+                           linear-gradient(90deg, rgba(232, 153, 19, 0.1) 1px, transparent 1px)`,
           backgroundSize: '50px 50px'
         }}
       />

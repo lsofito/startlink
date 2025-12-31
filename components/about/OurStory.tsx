@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CheckCircle, Users, Award, Rocket } from "lucide-react";
+import { Users, Award, Rocket, Building2 } from "lucide-react";
 
 const highlights = [
-  { icon: Users, text: "Expert guidance for startups and expansions" },
-  { icon: Award, text: "Compliance and market insights you can trust" },
-  { icon: Rocket, text: "Strategic solutions for business success" },
+  { icon: Users, text: "Comprehensive consultancy services for all business stages" },
+  { icon: Award, text: "In-depth knowledge of UAE laws and regulations" },
+  { icon: Rocket, text: "20+ years of regional experience" },
+  { icon: Building2, text: "Trusted partner across multiple industries" },
 ];
 
 export default function OurStory() {
@@ -42,7 +43,7 @@ export default function OurStory() {
               viewport={{ once: true }}
               className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4 border border-primary/20"
             >
-              About ABT Business & Financial Services
+              About Star Link Business Solutions FZE LLC
             </motion.span>
 
             <motion.h2
@@ -52,7 +53,7 @@ export default function OurStory() {
               transition={{ delay: 0.1 }}
               className="font-display text-3xl md:text-4xl font-bold text-dark mb-6"
             >
-              Seamless Business Setup <span className="text-primary">Solutions</span>
+              Streamlined Business <span className="text-primary">Solutions</span>
             </motion.h2>
 
             <div className="space-y-4 text-gray-600">
@@ -62,9 +63,10 @@ export default function OurStory() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
               >
-                At ABT Business Setup, we simplify business registration and management
-                in the UAE, offering tailored solutions to meet your unique goals.
-                Empowering growth through excellence and innovation.
+                At Star Link Business Solutions FZE LLC, we simplify business registration and management
+                in the UAE by delivering tailored solutions aligned with your unique goals.
+                Driven by excellence and innovation, we empower businesses to build, grow,
+                and succeed with confidence.
               </motion.p>
 
               <motion.p
@@ -73,11 +75,11 @@ export default function OurStory() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
-                We (ABT BUSINESS & FINANCIAL SERVICES LLC) are a team of expert business
-                setup consultants dedicated to empowering businesses to reach their full
-                potential. Our seasoned professionals deliver exceptional consultancy
-                services, assisting clients in successfully establishing and growing
-                their businesses in UAE's competitive market.
+                We are a team of highly experienced business setup consultants dedicated to
+                helping entrepreneurs, startups, and established companies unlock their full
+                potential. Our experts provide comprehensive consultancy services, guiding
+                clients through every stage of establishing and expanding their business in
+                the UAE's competitive market.
               </motion.p>
 
               <motion.p
@@ -86,10 +88,11 @@ export default function OurStory() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
               >
-                With in-depth knowledge of local laws, regulations, and business practices,
-                we provide valuable insights and practical solutions tailored to your needs.
-                Backed by years of experience, we have helped numerous businesses, especially
-                startups and SMEs, establish a strong presence in the UAE.
+                With in-depth knowledge of UAE laws, regulations, and corporate frameworks,
+                we offer strategic insights and practical solutions customized to your specific
+                requirements. Backed by a team with over 20 years of regional experience, we
+                have successfully supported numerous businesses—particularly startups and SMEs—in
+                building a strong and sustainable presence in the UAE.
               </motion.p>
             </div>
 
@@ -126,7 +129,8 @@ export default function OurStory() {
               transition={{ delay: 0.7 }}
               className="mt-8 text-lg font-medium text-dark"
             >
-              Let's make your entrepreneurial dreams a reality in the UAE's dynamic market.
+              Recognized as a trusted partner across multiple industries, Star Link Business Solutions FZE LLC
+              is committed to transforming your business vision into reality.
             </motion.p>
           </motion.div>
 
@@ -146,7 +150,7 @@ export default function OurStory() {
               >
                 <Image
                   src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop"
-                  alt="ABT Business Team"
+                  alt="Star Link Business Solutions FZE LLC Team"
                   width={600}
                   height={400}
                   className="w-full object-cover"

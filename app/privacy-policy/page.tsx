@@ -3,7 +3,7 @@ import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy Policy for ABT Business & Financial Services LLC - Learn how we collect, use, and protect your personal information.",
+  description: "Privacy Policy for Star Link Business Solutions FZE LLC - Learn how we collect, use, and protect your personal information.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -29,14 +29,14 @@ export default function PrivacyPolicyPage() {
 
               <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-r-lg mb-8">
                 <p className="text-gray-700 font-medium">
-                  Privacy & confidentiality are of utmost importance to ABT BUSINESS & FINANCIAL SERVICES LLC
+                  Privacy & confidentiality are of utmost importance to Star Link Business Solutions FZE LLC
                 </p>
               </div>
 
               <p className="text-gray-600 mb-8">
                 This Privacy Policy outlines the types of information that may or may not be collected through
-                the ABT BUSINESS & FINANCIAL SERVICES LLC website and explains how such information is used.
-                ABT BUSINESS & FINANCIAL SERVICES LLC is committed to respecting the privacy and confidentiality
+                the Star Link Business Solutions FZE LLC website and explains how such information is used.
+                Star Link Business Solutions FZE LLC is committed to respecting the privacy and confidentiality
                 of all website visitors, clients, prospective clients, partners, and affiliates.
               </p>
 

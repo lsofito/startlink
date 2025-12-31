@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
@@ -25,7 +24,58 @@ const DynamicIcon = ({ name }: { name: string }) => {
 
 export default function ServiceShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const swiperRef = useRef<SwiperType | null>(null);
+  const previousHashRef = useRef<string>('');
   const activeService = serviceCategories[activeIndex];
+
+  // Navigate to service category by hash
+  const navigateToHash = useCallback((hash: string, swiper?: SwiperType) => {
+    if (!hash) return;
+    const categoryIndex = serviceCategories.findIndex(cat => cat.id === hash);
+    if (categoryIndex !== -1) {
+      setActiveIndex(categoryIndex);
+      const swiperInstance = swiper || swiperRef.current;
+      if (swiperInstance) {
+        swiperInstance.slideTo(categoryIndex, 0); // Use 0 speed for immediate transition
+      }
+    }
+  }, []);
+
+  // Poll for hash changes (handles same-page Next.js Link navigation)
+  useEffect(() => {
+    const checkHashChange = () => {
+      const currentHash = window.location.hash.slice(1);
+      if (currentHash && currentHash !== previousHashRef.current) {
+        previousHashRef.current = currentHash;
+        navigateToHash(currentHash);
+      }
+    };
+
+    // Check immediately on mount
+    checkHashChange();
+
+    // Set up polling interval for same-page navigation
+    // Next.js Link doesn't trigger hashchange event on same page
+    const intervalId = setInterval(checkHashChange, 100);
+
+    // Also listen to native hashchange (for browser back/forward)
+    window.addEventListener('hashchange', checkHashChange);
+
+    return () => {
+      clearInterval(intervalId);
+      window.removeEventListener('hashchange', checkHashChange);
+    };
+  }, [navigateToHash]);
+
+  // Handle swiper initialization - apply hash immediately when swiper is ready
+  const handleSwiperInit = (swiper: SwiperType) => {
+    swiperRef.current = swiper;
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      previousHashRef.current = hash;
+      navigateToHash(hash, swiper);
+    }
+  };
 
   return (
     <section className="section-padding bg-white overflow-hidden">
@@ -59,6 +109,7 @@ export default function ServiceShowcase() {
               pagination={{
                 clickable: true,
               }}
+              onSwiper={handleSwiperInit}
               onSlideChange={(swiper: SwiperType) => setActiveIndex(swiper.activeIndex)}
               className="!w-[280px] sm:!w-[320px] md:!w-[380px] mx-auto pb-12"
             >
@@ -183,7 +234,10 @@ export default function ServiceShowcase() {
             {serviceCategories.map((service, idx) => (
               <button
                 key={service.id}
-                onClick={() => setActiveIndex(idx)}
+                onClick={() => {
+                  setActiveIndex(idx);
+                  swiperRef.current?.slideTo(idx);
+                }}
                 className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap ${
                   idx === activeIndex
                     ? "bg-primary text-dark shadow-md"

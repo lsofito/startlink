@@ -83,7 +83,7 @@ export default function CoreValues() {
             Values That <span className="text-primary">Define Us</span>
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            At ABT Business & Financial Services, our values guide every decision we make
+            At Star Link Business Solutions FZE LLC, our values guide every decision we make
             and every service we deliver to our clients.
           </p>
         </motion.div>

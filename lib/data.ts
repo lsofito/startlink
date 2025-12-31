@@ -9,13 +9,14 @@ export const navLinks = [
 
 // Company Info
 export const companyInfo = {
-  name: "Starlinkbiz",
-  fullName: "ABT Business & Financial Services",
+  name: "Star Link Business Solutions FZE LLC",
+  shortName: "Star Link",
+  fullName: "Star Link Business Solutions FZE LLC",
   tagline: "Your Business Journey in UAE Starts Here",
   phone: "+97150 9490768",
   email: "Info@starlinkbiz.com",
   address: "Office XXX, Business Bay, Dubai, UAE",
-  hours: "Sun-Thu: 9AM - 6PM",
+  hours: "Mon-Sat: 9AM - 6PM",
   whatsapp: "+971509490768",
 };
 
@@ -550,10 +551,11 @@ export const footerLinks = {
   ],
   services: [
     { name: "Company Formation", href: "/services#formation" },
-    { name: "Trade License", href: "/services#license" },
-    { name: "Visa Services", href: "/services#visa" },
+    { name: "Licensing Services", href: "/services#licensing" },
+    { name: "Visa & Immigration", href: "/services#visa" },
     { name: "PRO Services", href: "/services#pro" },
-    { name: "Accounting & Tax", href: "/services#accounting" },
+    { name: "Corporate Services", href: "/services#corporate" },
+    { name: "Compliance & Tax", href: "/services#compliance" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy-policy" },

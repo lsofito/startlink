@@ -11,7 +11,7 @@ interface ParticleBackgroundProps {
 
 export default function ParticleBackground({
   particleCount = 50,
-  colors = ["#D4AF37", "#1D4E89", "#E63946"],
+  colors = ["#E89913", "#22C55E", "#E63946"],
   className = "",
   speed = 1,
 }: ParticleBackgroundProps) {

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, Clock } from "lucide-react";
 import { companyInfo, footerLinks, socialLinks } from "@/lib/data";
 
@@ -15,29 +16,20 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative text-white" style={{ backgroundColor: '#1A1A2E', backgroundImage: 'none', isolation: 'isolate' }}>
+    <footer className="relative text-white" style={{ backgroundColor: '#111111', backgroundImage: 'none', isolation: 'isolate' }}>
       {/* Main Footer */}
       <div className="container-custom py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10">
-                <svg viewBox="0 0 100 100" className="w-full h-full">
-                  <polygon
-                    points="50,5 61,40 98,40 68,62 79,97 50,75 21,97 32,62 2,40 39,40"
-                    fill="#D4AF37"
-                  />
-                  <path
-                    d="M 25 70 Q 30 30, 60 20 L 55 10 L 75 25 L 55 35 L 60 25 Q 35 35, 30 65 Z"
-                    fill="#E63946"
-                  />
-                  <path
-                    d="M 75 30 Q 70 70, 40 80 L 45 90 L 25 75 L 45 65 L 40 75 Q 65 65, 70 35 Z"
-                    fill="#1D4E89"
-                  />
-                </svg>
-              </div>
+              <Image
+                src="/images/logo/logo.png"
+                alt="Starlink Logo"
+                width={40}
+                height={40}
+                className="w-10 h-10"
+              />
               <span className="font-display text-xl font-bold">{companyInfo.name}</span>
             </div>
             <p className="text-gray-300 mb-6">
@@ -131,7 +123,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div>
+      <div className="border-t border-white/10">
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-300 text-sm text-center md:text-left">

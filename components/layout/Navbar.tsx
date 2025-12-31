@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
@@ -27,55 +28,43 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || !isHomePage
           ? "bg-white shadow-md py-3"
-          : "bg-transparent py-5"
+          : "bg-dark py-4"
       }`}
     >
-      <div className="container-custom">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 relative">
-              {/* Logo SVG - Gold Star with Red/Blue Arrows */}
-              <svg viewBox="0 0 100 100" className="w-full h-full">
-                {/* Gold Star */}
-                <polygon
-                  points="50,5 61,40 98,40 68,62 79,97 50,75 21,97 32,62 2,40 39,40"
-                  fill="#D4AF37"
-                />
-                {/* Red Arrow (going up) */}
-                <path
-                  d="M 25 70 Q 30 30, 60 20 L 55 10 L 75 25 L 55 35 L 60 25 Q 35 35, 30 65 Z"
-                  fill="#E63946"
-                />
-                {/* Blue Arrow (going down) */}
-                <path
-                  d="M 75 30 Q 70 70, 40 80 L 45 90 L 25 75 L 45 65 L 40 75 Q 65 65, 70 35 Z"
-                  fill="#1D4E89"
-                />
-              </svg>
-            </div>
+          {/* Left - Logo */}
+          <Link href="/" className="flex items-center gap-2.5 flex-shrink-0">
+            <Image
+              src="/images/logo/logo.png"
+              alt="Starlink Logo"
+              width={40}
+              height={40}
+              className="w-10 h-10 flex-shrink-0"
+            />
             <span
-              className={`font-display text-xl font-bold ${
+              className={`font-display text-lg font-bold ${
                 scrolled || !isHomePage ? "text-dark" : "text-white"
               }`}
             >
-              {companyInfo.name}
+              <span className="hidden md:inline">{companyInfo.name}</span>
+              <span className="md:hidden">{companyInfo.shortName}</span>
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          {/* Center - Desktop Navigation */}
+          <div className="hidden lg:flex items-center justify-center gap-8 absolute left-1/2 -translate-x-1/2">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 aria-current={pathname === link.href ? "page" : undefined}
-                className={`link-underline font-medium transition-colors ${
+                className={`font-medium transition-colors ${
                   pathname === link.href
                     ? "text-primary"
                     : scrolled || !isHomePage
-                    ? "text-dark hover:text-primary"
-                    : "text-white hover:text-primary-light"
+                    ? "text-gray-700 hover:text-primary"
+                    : "text-gray-200 hover:text-primary"
                 }`}
               >
                 {link.name}
@@ -83,18 +72,21 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-4">
+          {/* Right - CTA Section */}
+          <div className="hidden lg:flex items-center gap-5 flex-shrink-0">
             <a
               href={`tel:${companyInfo.phone}`}
               className={`flex items-center gap-2 font-medium ${
-                scrolled || !isHomePage ? "text-dark" : "text-white"
+                scrolled || !isHomePage ? "text-gray-700" : "text-white"
               }`}
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4 text-primary" />
               {companyInfo.phone}
             </a>
-            <Link href="/contact" className="btn-primary">
+            <Link
+              href="/contact"
+              className="bg-primary hover:bg-primary-dark text-dark font-semibold px-5 py-2.5 rounded-lg transition-all"
+            >
               Free Consultation
             </Link>
           </div>
@@ -148,13 +140,13 @@ export default function Navbar() {
                   href={`tel:${companyInfo.phone}`}
                   className="flex items-center gap-2 text-dark font-medium py-2"
                 >
-                  <Phone className="w-4 h-4" />
+                  <Phone className="w-4 h-4 text-primary" />
                   {companyInfo.phone}
                 </a>
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="btn-primary text-center"
+                  className="bg-primary hover:bg-primary-dark text-dark font-semibold py-3 px-6 rounded-lg text-center"
                 >
                   Free Consultation
                 </Link>

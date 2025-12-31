@@ -8,7 +8,7 @@ export default function HowItWorks() {
   return (
     <section
       className="section-padding relative overflow-hidden"
-      style={{ backgroundColor: '#141425', isolation: 'isolate' }}
+      style={{ backgroundColor: '#111111', isolation: 'isolate' }}
     >
       {/* Animated gradient orbs */}
       <motion.div
@@ -26,8 +26,8 @@ export default function HowItWorks() {
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: `linear-gradient(rgba(212, 175, 55, 0.3) 1px, transparent 1px),
-                           linear-gradient(90deg, rgba(212, 175, 55, 0.3) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(rgba(232, 153, 19, 0.3) 1px, transparent 1px),
+                           linear-gradient(90deg, rgba(232, 153, 19, 0.3) 1px, transparent 1px)`,
           backgroundSize: '60px 60px'
         }}
       />
