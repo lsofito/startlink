@@ -92,7 +92,7 @@ export default function Hero() {
               className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8 leading-tight drop-shadow-lg"
               style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.5)" }}
             >
-              Empowering your entrepreneurial journey in Dubai&apos;s vibrant business hub
+              Empowering Your Entrepreneurial Journey in Dubai&apos;s Vibrant Business Hub
             </motion.h1>
 
             {/* CTA Buttons */}
