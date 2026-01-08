@@ -21,7 +21,7 @@ export default function ServicesPage() {
       />
       <ServiceShowcase />
       <FreeZoneSlider />
-      <PricingPackages />
+      {/* <PricingPackages /> */}
       <FAQ />
       <CTABanner />
     </>
