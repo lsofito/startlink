@@ -38,6 +38,11 @@ export default function ServiceShowcase() {
       if (swiperInstance) {
         swiperInstance.slideTo(categoryIndex, 0); // Use 0 speed for immediate transition
       }
+      // Scroll to the services section
+      const section = document.getElementById('services');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   }, []);
 
@@ -78,7 +83,7 @@ export default function ServiceShowcase() {
   };
 
   return (
-    <section className="section-padding bg-white overflow-hidden">
+    <section id="services" className="section-padding bg-white overflow-hidden">
       <div className="container-custom">
         <SectionHeader
           badge="Our Services"
@@ -86,6 +91,34 @@ export default function ServiceShowcase() {
           subtitle="Comprehensive business setup solutions tailored to your needs"
           centered
         />
+
+        {/* Service Navigation Pills */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-8 overflow-x-auto pb-4 -mx-4 px-4"
+        >
+          <div className="flex justify-start lg:justify-center gap-2 sm:gap-3 min-w-max">
+            {serviceCategories.map((service, idx) => (
+              <button
+                key={service.id}
+                onClick={() => {
+                  setActiveIndex(idx);
+                  swiperRef.current?.slideTo(idx);
+                }}
+                className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap ${
+                  idx === activeIndex
+                    ? "bg-primary text-dark shadow-md"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                }`}
+              >
+                {service.title}
+              </button>
+            ))}
+          </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mt-12">
           {/* Swiper Cards */}
@@ -221,34 +254,6 @@ export default function ServiceShowcase() {
             </AnimatePresence>
           </motion.div>
         </div>
-
-        {/* Service Navigation Dots */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-12 overflow-x-auto pb-4 -mx-4 px-4"
-        >
-          <div className="flex justify-start lg:justify-center gap-2 sm:gap-3 min-w-max">
-            {serviceCategories.map((service, idx) => (
-              <button
-                key={service.id}
-                onClick={() => {
-                  setActiveIndex(idx);
-                  swiperRef.current?.slideTo(idx);
-                }}
-                className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap ${
-                  idx === activeIndex
-                    ? "bg-primary text-dark shadow-md"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                }`}
-              >
-                {service.title}
-              </button>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );

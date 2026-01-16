@@ -41,15 +41,15 @@ export default function Navbar() {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between">
           {/* Left - Logo */}
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
+          <Link href="/" className="flex items-center gap-4 flex-shrink-0">
             <img
               src="/images/logo/logo.png"
               alt="Star Link Logo"
-              className="w-14 h-14 md:w-16 md:h-16 flex-shrink-0 object-contain"
+              className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 flex-shrink-0 object-contain"
             />
             <div className="font-display font-bold">
-              <div className="text-xl md:text-2xl leading-tight text-primary">Star Link</div>
-              <div className={`text-sm leading-tight ${scrolled || !isHomePage ? "text-gray-600" : "text-gray-300"}`}>Business Solutions</div>
+              <div className="text-2xl md:text-3xl lg:text-4xl leading-tight text-primary">Star Link</div>
+              <div className={`text-base md:text-lg lg:text-xl leading-tight ${scrolled || !isHomePage ? "text-gray-600" : "text-gray-300"}`}>Business Solutions</div>
             </div>
           </Link>
 

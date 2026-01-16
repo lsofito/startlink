@@ -267,6 +267,30 @@ export const faqs = [
 // Free Zones Comparison Data
 export const freeZones = [
   {
+    id: "anc",
+    name: "ANC FREE ZONE",
+    fullName: "ANC Free Zone",
+    minCost: "AED 4,888",
+    visaQuota: "Zero Visa Package",
+    setupTime: "2-3 days",
+    location: "UAE",
+    benefits: ["Up to 10 activities", "Unlimited shareholders", "Full documentation included", "Bank letter for account opening"],
+    idealFor: ["Holding", "Consulting", "E-commerce"],
+    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&h=400&fit=crop",
+  },
+  {
+    id: "rakez",
+    name: "RAKEZ FREE ZONE",
+    fullName: "Ras Al Khaimah Economic Zone",
+    minCost: "AED 5,999",
+    visaQuota: "Zero Visa Package (Silver)",
+    setupTime: "2-3 days",
+    location: "Ras Al Khaimah",
+    benefits: ["License included", "Flexi-desk", "1-year support", "Bank account help"],
+    idealFor: ["SMEs", "Trading", "Startups"],
+    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&h=400&fit=crop",
+  },
+  {
     id: "ajman",
     name: "AJMAN FREE ZONE",
     fullName: "Ajman Free Zone Authority",
@@ -289,30 +313,6 @@ export const freeZones = [
     benefits: ["3 business activities", "Zero visa package", "Fast processing", "Dubai location"],
     idealFor: ["Consulting", "E-commerce", "Trading"],
     image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=400&fit=crop",
-  },
-  {
-    id: "rakez",
-    name: "RAKEZ FREE ZONE",
-    fullName: "Ras Al Khaimah Economic Zone",
-    minCost: "AED 11,200",
-    visaQuota: "Zero Visa Package",
-    setupTime: "2-3 days",
-    location: "Ras Al Khaimah",
-    benefits: ["3 business activities", "Zero visa package", "Cost-effective setup", "Strategic location"],
-    idealFor: ["SMEs", "Trading", "Startups"],
-    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&h=400&fit=crop",
-  },
-  {
-    id: "anc",
-    name: "ANC FREE ZONE",
-    fullName: "ANC Free Zone",
-    minCost: "From AED 4,888",
-    visaQuota: "Zero Visa Package",
-    setupTime: "2-3 days",
-    location: "UAE",
-    benefits: ["Unlimited shareholders", "Up to 10 mix & match activities", "Full documentation included", "Bank letter for account opening"],
-    idealFor: ["Holding", "Consulting", "E-commerce"],
-    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&h=400&fit=crop",
   },
   {
     id: "meydan",
@@ -560,7 +560,6 @@ export const footerLinks = {
   legal: [
     { name: "Privacy Policy", href: "/privacy-policy" },
     { name: "Refund Policy", href: "/refund-policy" },
-    { name: "Terms of Service", href: "/terms" },
   ],
 };
 

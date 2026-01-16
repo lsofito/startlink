@@ -21,15 +21,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-4 mb-4">
               <img
                 src="/images/logo/logo.png"
                 alt="Star Link Logo"
-                className="w-12 h-12 md:w-14 md:h-14 object-contain"
+                className="w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 object-contain"
               />
               <div className="font-display font-bold">
-                <div className="text-xl md:text-2xl leading-tight text-primary">Star Link</div>
-                <div className="text-xs md:text-sm leading-tight text-gray-300">Business Solutions FZE LLC</div>
+                <div className="text-xl md:text-2xl lg:text-3xl leading-tight text-primary">Star Link</div>
+                <div className="text-sm md:text-base leading-tight text-gray-300">Business Solutions FZE LLC</div>
               </div>
             </div>
             <p className="text-gray-300 mb-6">

@@ -43,7 +43,7 @@ export default function BlogGrid() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <Link href={`/blog/${blogPosts[0].slug}`}>
+            <Link href="/contact">
               <div className="grid lg:grid-cols-2 gap-8 bg-gray-50 rounded-3xl overflow-hidden group">
                 <div className="relative h-64 lg:h-auto">
                   <Image
@@ -84,7 +84,7 @@ export default function BlogGrid() {
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
             >
-              <Link href={`/blog/${post.slug}`}>
+              <Link href="/contact">
                 <div className="group bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-shadow">
                   {/* Image */}
                   <div className="relative h-48 overflow-hidden">
