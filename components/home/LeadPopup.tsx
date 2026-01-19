@@ -44,15 +44,61 @@ export default function LeadPopup() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // Simulate form submission (email integration later)
+  //   setSubmitted(true);
+  //   // Auto close after showing success
+  //   setTimeout(() => {
+  //     handleClose();
+  //   }, 3000);
+  // };
+const WHATSAPP_NUMBER = "971509490768"; // Replace with your WhatsApp number
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Simulate form submission (email integration later)
-    setSubmitted(true);
-    // Auto close after showing success
-    setTimeout(() => {
-      handleClose();
-    }, 3000);
-  };
+  e.preventDefault();
+
+  const { name, email, phone, company, service, message } = formData;
+
+  // Hard validation (HTML required is not enough)
+  if (!name || !email || !message) {
+    alert("Please fill all required fields");
+    return;
+  }
+
+const whatsappMessage = `
+    Hi 👋,
+
+    My name is ${name}. I’m reaching out to enquire about your services.
+
+    Here are my details:
+    • Email: ${email}
+    • Phone: ${phone || "N/A"}
+    • Company: ${company || "N/A"}
+    • Service I’m interested in: ${service || "Not specified"}
+
+    Message:
+    ${message}
+
+    Looking forward to hearing from you.
+    Thank you.
+    `.trim();
+
+
+  const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
+
+  // Open WhatsApp
+  window.open(whatsappURL, "_blank");
+
+  // Optional UI feedback
+  setSubmitted(true);
+
+  setTimeout(() => {
+    handleClose();
+  }, 3000);
+};
+
 
   return (
     <AnimatePresence>
