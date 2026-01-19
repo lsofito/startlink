@@ -26,14 +26,11 @@ export default function LeadPopup() {
     message: "",
   });
 
-  // Show popup on first visit
+  // Show popup on page visit
   useEffect(() => {
-    const hasVisited = localStorage.getItem("starlinkVisited");
-    if (!hasVisited) {
-      // Small delay for better UX
-      const timer = setTimeout(() => setShowPopup(true), 2500);
-      return () => clearTimeout(timer);
-    }
+    // Small delay for better UX
+    const timer = setTimeout(() => setShowPopup(true), 2500);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleClose = () => {

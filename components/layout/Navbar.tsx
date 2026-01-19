@@ -48,7 +48,7 @@ export default function Navbar() {
               className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 flex-shrink-0 object-contain"
             />
             <div className="font-display font-bold">
-              <div className="text-2xl md:text-3xl lg:text-4xl leading-tight text-primary">Star Link</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl leading-tight text-primary">Star Link</div>
               <div className={`text-base md:text-lg lg:text-xl leading-tight ${scrolled || !isHomePage ? "text-gray-600" : "text-gray-300"}`}>Business Solutions</div>
             </div>
           </Link>
