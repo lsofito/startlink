@@ -8,6 +8,7 @@ import ServicesSlider from "@/components/home/ServicesSlider";
 import CoreValues from "@/components/home/CoreValues";
 import HowItWorks from "@/components/home/HowItWorks";
 import Testimonials from "@/components/home/Testimonials";
+import GoogleReviews from "@/components/home/GoogleReviews";
 import BlogSlider from "@/components/home/BlogSlider";
 import CTABanner from "@/components/home/CTABanner";
 import LeadPopup from "@/components/home/LeadPopup";
@@ -26,6 +27,7 @@ export default function Home() {
       <CoreValues />
       <HowItWorks />
       <Testimonials />
+      <GoogleReviews />
       <BlogSlider />
       <CTABanner />
     </>
