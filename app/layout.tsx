@@ -23,17 +23,17 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: "[Company Name] - Business Setup Consultants in UAE",
-    template: "%s | [Company Name]",
+    default: "StarLink - Business Setup Consultants in UAE",
+    template: "%s | StarLink",
   },
   description: "Expert business setup consultants in UAE with 20+ years of experience. We help entrepreneurs establish mainland, free zone, and offshore companies in Dubai, Abu Dhabi, and across all Emirates.",
   keywords: ["business setup UAE", "company formation Dubai", "free zone company", "mainland company UAE", "PRO services", "visa processing UAE"],
-  authors: [{ name: "[Company Name]" }],
+  authors: [{ name: "StarLink" }],
   openGraph: {
     type: "website",
     locale: "en_AE",
-    siteName: "[Company Name]",
-    title: "[Company Name] - Business Setup Consultants in UAE",
+    siteName: "StarLink",
+    title: "StarLink - Business Setup Consultants in UAE",
     description: "Expert business setup consultants in UAE with 20+ years of experience.",
   },
 };
